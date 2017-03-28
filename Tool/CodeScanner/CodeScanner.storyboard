@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Code Scanner-->
+        <scene sceneID="cQ1-DA-wyC">
+            <objects>
+                <viewController storyboardIdentifier="CodeScannerViewController" id="i68-WM-0FJ" customClass="CodeScanner" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hjw-Pt-7KF"/>
+                        <viewControllerLayoutGuide type="bottom" id="PFh-8S-UKM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vP8-26-SHH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="tkl-ug-VIv">
+                                <rect key="frame" x="76" y="106" width="223" height="223"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="223" id="guw-kc-P47"/>
+                                    <constraint firstAttribute="height" constant="223" id="pVu-Dy-erY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="將行動條碼對準畫面即可讀取" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgg-Wv-GlQ" userLabel="LabelHintInformation">
+                                <rect key="frame" x="75.5" y="336" width="225.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Sih-fo-cWG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.35294117650000001" green="0.4941176471" blue="0.58823529409999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tkl-ug-VIv" firstAttribute="top" secondItem="Hjw-Pt-7KF" secondAttribute="bottom" constant="86" id="9Vz-V5-RS6"/>
+                            <constraint firstItem="bgg-Wv-GlQ" firstAttribute="centerX" secondItem="vP8-26-SHH" secondAttribute="centerX" id="MzG-KN-gRD"/>
+                            <constraint firstItem="tkl-ug-VIv" firstAttribute="centerX" secondItem="vP8-26-SHH" secondAttribute="centerX" id="Nxz-B9-jI8"/>
+                            <constraint firstItem="bgg-Wv-GlQ" firstAttribute="top" secondItem="tkl-ug-VIv" secondAttribute="bottom" constant="6.6100000000000003" id="Sgi-t8-4QU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PqW-Yo-20L">
+                        <barButtonItem key="leftBarButtonItem" title="返回" id="tGo-As-kni">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="backActionWithSender:" destination="i68-WM-0FJ" id="yMj-qz-Qww"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelHint" destination="bgg-Wv-GlQ" id="klF-V5-w5J"/>
+                        <outlet property="preview" destination="tkl-ug-VIv" id="bJU-Z4-KZa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1a-Xr-qks" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1570" y="322"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ico_qrcode" width="16" height="16"/>
+    </resources>
+</document>
